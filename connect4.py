@@ -119,7 +119,6 @@ def update_game(game_state):
             valid_move = True
             print("Valid Move! Updating game state... ")
             row  = 5
-            print(game_state[column + (7*row)])
             while row >=0:
                 counter = 1
                 #If column is completely filled with token
@@ -303,7 +302,6 @@ def main():
     initial_n()
     while check_win(game_state) == False:
         game_state = update_game(game_state)
-        print(game_state)
         num_of_cell = game_state.count("X")
         if num_of_cell == 0:
             print("end of Game")
