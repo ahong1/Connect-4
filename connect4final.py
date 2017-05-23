@@ -479,8 +479,8 @@ def startgame():
         game_state = computer_play()
     
 
-    wn.onkeypress(saveGame, 's')
-    wn.onkeypress(loadGame, 'l')
+    wn.onkey(saveGame, 's')
+    wn.onkey(loadGame, 'l')
     wn.onscreenclick(turn_cycle)
     wn.listen()
     turtle.mainloop()
@@ -508,7 +508,7 @@ def main():
     wn.screensize(windowLength, windowLength)
     wn.setworldcoordinates(0,0,windowLength,windowLength)
     write_intro()
-    wn.onkeypress(clearScreenStartGame)
+    wn.onkey(clearScreenStartGame, "space")
     wn.listen()
     turtle.mainloop()
         
